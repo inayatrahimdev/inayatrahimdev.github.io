@@ -1,367 +1,1104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inayat Rahim | AI & Computer Science</title>
-    <link rel="icon" type="image/x-icon" href="f8sUr.jpg">
-    
-    <style>
-        :root {
-            --primary: #000;
-            --secondary: #333;
-            --light: #f5f5f5;
-            --gray: #777;
-            --border: #ddd;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Georgia', serif;
-        }
-        
-        body {
-            background-color: #fff;
-            color: var(--secondary);
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-        }
-        
-        .header-text {
-            flex: 1;
-        }
-        
-        .name {
-            font-size: 3rem;
-            font-weight: normal;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-        
-        .title {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .contact-info span {
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-info span::before {
-            content: "•";
-            margin-right: 0.5rem;
-        }
-        
-        /* Natural Rounded Image Cover - Right Side */
-        .profile-container {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 24px;
-    /* Remove the background gradient */
-    background: none; /* or just remove the entire background line */
-    padding: 3px;
-}
-        
-        
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 21px;
-            background-color: #f5f5f5;
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        section:last-child {
-            border-bottom: none;
-        }
-        
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* Education Section */
-        .edu-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .edu-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .degree {
-            font-weight: bold;
-            margin-bottom: 0.2rem;
-        }
-        
-        .institution {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .date {
-            color: var(--gray);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .description {
-            font-size: 0.95rem;
-        }
-        
-        /* Skills Section */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-        
-        .skill-tag {
-            background-color: var(--light);
-            padding: 0.4rem 0.8rem;
-            border-radius: 3px;
-            font-size: 0.9rem;
-        }
-        
-        /* Publications Section */
-        .pub-item {
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            text-indent: -1rem;
-        }
-        
-        .pub-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .pub-title {
-            font-weight: bold;
-        }
-        
-        .pub-authors {
-            color: var(--gray);
-        }
-        
-        .pub-venue {
-            font-style: italic;
-        }
-        
-        /* Footer */
-        footer {
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            
-            .profile-container {
-                width: 180px;
-                height: 180px;
-                margin-bottom: 1.5rem;
-            }
-            
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .contact-info {
-                justify-content: center;
-            }
-            
-            .contact-info span::before {
-                content: "";
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inayat Rahim — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #0a0a0f;
+      --paper: #f4f1eb;
+      --cream: #ede9e0;
+      --accent: #c8602a;
+      --accent2: #2a6bc8;
+      --muted: #7a7468;
+      --line: rgba(10,10,15,0.12);
+      --mono: 'DM Mono', monospace;
+      --sans: 'Syne', sans-serif;
+      --serif: 'Fraunces', serif;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* ─── LAYOUT ─── */
+    .wrap {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      mix-blend-mode: multiply;
+    }
+    nav .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-left {
+      padding: 140px 60px 80px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--line);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .hero-name {
+      font-family: var(--sans);
+      font-size: clamp(52px, 7vw, 88px);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      margin-bottom: 32px;
+    }
+
+    .hero-name em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-bio {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 420px;
+      margin-bottom: 48px;
+    }
+
+    .hero-bio strong {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 14px 28px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+
+    .btn-ghost {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--ink); }
+
+    .hero-right {
+      padding: 140px 0 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-img-wrap {
+      width: 100%;
+      aspect-ratio: 3/4;
+      max-width: 320px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, var(--paper) 100%);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: sepia(15%) contrast(1.05);
+      display: block;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 32px;
+    }
+
+    .stat {
+      background: var(--paper);
+      padding: 20px;
+    }
+
+    .stat-num {
+      font-family: var(--sans);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─── SECTION SCAFFOLDING ─── */
+    section {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-inner {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+
+    .section-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ─── ABOUT ─── */
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-pull {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+
+    .about-body {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .about-body p + p { margin-top: 16px; }
+
+    .about-body strong { color: var(--ink); font-weight: 400; }
+
+    .about-sidebar {
+      padding-top: 8px;
+    }
+
+    .sidebar-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .contact-list li {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    .contact-list a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-list a:hover { color: var(--accent); }
+
+    /* ─── SKILLS ─── */
+    #skills .skills-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .skill-group {
+      background: var(--paper);
+      padding: 32px;
+    }
+
+    .skill-group-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .skill-item {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 300;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink);
+    }
+
+    .skill-item:last-child { border-bottom: none; }
+
+    .skill-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── EXPERIENCE / RESEARCH ─── */
+    #experience .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exp-item:last-child { border-bottom: none; }
+
+    .exp-meta {
+      padding-top: 4px;
+    }
+
+    .exp-org {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .exp-role {
+      font-family: var(--sans);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .exp-desc {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .exp-desc strong { color: var(--ink); font-weight: 400; }
+
+    .exp-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .exp-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      color: var(--muted);
+    }
+
+    /* ─── HONORS ─── */
+    #honors .honors-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .honor-card {
+      background: var(--paper);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.25s;
+    }
+
+    .honor-card:hover { background: var(--cream); }
+
+    .honor-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .honor-title {
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .honor-sub {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .honor-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      width: 36px; height: 36px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    /* ─── EDUCATION ─── */
+    #education .edu-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      padding: 48px;
+      border: 1px solid var(--line);
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edu-card::before {
+      content: 'B.S.';
+      position: absolute;
+      right: -10px;
+      top: 20px;
+      font-family: var(--sans);
+      font-size: 120px;
+      font-weight: 800;
+      color: var(--line);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .edu-year {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .edu-degree {
+      font-family: var(--sans);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .edu-institution {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .edu-body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    /* ─── CONNECT / FOOTER ─── */
+    #connect {
+      border-bottom: none;
+    }
+
+    #connect .connect-inner {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+
+    .connect-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .connect-headline {
+      font-family: var(--sans);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .connect-headline span { color: var(--accent); }
+
+    .connect-sub {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .connect-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .connect-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      padding: 12px 24px;
+      transition: all 0.2s;
+    }
+    .connect-link:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-loc {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ─── ENTRANCE ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── TICKER ─── */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+      background: var(--ink);
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 60px;
+      animation: ticker 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker-item {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--paper);
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    .ticker-item strong {
+      opacity: 1;
+      color: var(--paper);
+      font-weight: 400;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ─── CURSOR DOT ─── */
+    .cursor {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.15s ease, opacity 0.2s;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 860px) {
+      #hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-left {
+        padding: 120px 0 48px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-right {
+        padding: 48px 0 64px;
+      }
+      .hero-img-wrap { max-width: 240px; }
+      #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      #skills .skills-columns { grid-template-columns: 1fr; }
+      .exp-item { grid-template-columns: 1fr; gap: 8px; }
+      #honors .honors-grid { grid-template-columns: 1fr; }
+      #education .edu-card { grid-template-columns: 1fr; gap: 12px; }
+      .nav-links { display: none; }
+      footer .wrap { flex-direction: column; gap: 8px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="header-content">
-                <div class="header-text">
-                    <h1 class="name">INAYAT RAHIM</h1>
-                    <p class="title">Artificial Intelligence & Computer Science </p>
-                    <div class="contact-info">
-                        <span>inayatrahim006@gmail.com</span>
-                        <span>+92 3165800166</span>
-                        <span>linkedin.com/in/inayat-rahim-b0655b29b/</span>
-                        <span>github.com/inayatrahimdev</span>
-                    </div>
-                </div>
-                
-                <div class="profile-container">
-                    <img src="f8sUr.jpg" alt="Inayat Rahim" class="profile-img">
-                </div>
-            </div>
-        </header>
 
-        <!-- Education Section -->
-        <section>
-            <h2 class="section-title">Education</h2>
-            <div class="edu-item">
-                <div class="degree">BS in Artificial Intelligence</div>
-                <div class="institution">Szabist University</div>
-                <div class="date">2023 - 2027</div>
-                <div class="description">Specialized in Reinforcement Learning, AI Agents, RAG, and Multi-Agent Systems with research focused on maximizing ROI and business value through strategic AI implementation. Developed expertise in solving real-time enterprise challenges by optimizing computational efficiency and reducing operational costs. Research demonstrates measurable impact in overcoming time and resource constraints through innovative algorithmic strategies and scalable architectures.</div>
-            </div>
-        </section>
+  <div class="cursor" id="cursor"></div>
 
-        <!-- Skills Section -->
-        <section>
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-container">
-                <div class="skill-tag">Retrieval Augmented Generation</div>
-                <div class="skill-tag">AI Agents</div>
-                <div class="skill-tag">Reinforcement Learning</div>
-                <div class="skill-tag">Neural Architecture Search</div>
-                <div class="skill-tag">Azure</div>
-                <div class="skill-tag">PyTorch</div>
-                <div class="skill-tag">Distributed Computing</div>
-                <div class="skill-tag">Algorithm Design</div>
-            </div>
-        </section>
+  <!-- NAV -->
+  <nav>
+    <div class="wrap">
+      <a class="nav-logo" href="#">IR / 2026</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Research</a></li>
+        <li><a href="#honors">Awards</a></li>
+        <li><a href="#connect">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <!-- Research Experience Section -->
-<section>
-  <h2 class="section-title">Research Experience</h2>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="wrap" style="display:contents">
+      <div class="hero-left wrap" style="padding-left:0;padding-right:0;max-width:none;width:100%;grid-column:1;grid-row:1">
+        <div style="padding: 140px 60px 80px 32px; display:flex; flex-direction:column; justify-content:space-between; height:100%; border-right:1px solid var(--line); max-width:calc(510px + 32px)">
+          <div>
+            <p class="hero-eyebrow">AI Engineer · Islamabad, Pakistan</p>
+            <h1 class="hero-name">INAYAT<br><em>RAHIM</em></h1>
+            <p class="hero-bio">
+              Building <strong>intelligent systems</strong> that bridge the gap between research and real-world impact. Specializing in LLM fine-tuning, RAG pipelines, and agentic architectures.
+            </p>
+          </div>
+          <div class="hero-cta-row">
+            <a href="#connect" class="btn-primary">Get in touch</a>
+            <a href="https://github.com/inayatrahimdev" target="_blank" class="btn-ghost">View GitHub →</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="edu-item">
-    <div class="degree">Prompt Engineering Research Intern</div>
-    <div class="institution">Excelerate</div>
-    <div class="date">September 2025 – Present</div>
-    <div class="description">
-      Exploring advanced Prompt Engineering methods for LLMs with a focus on <strong>efficiency, reasoning, and adaptability</strong>. 
-      Designed strategies that accelerate business growth by unlocking new AI-driven capabilities, 
-      <strong>improving ROI</strong> through automation, and enabling companies to scale with data-driven insights. 
-      Actively solving <strong>real-time business problems</strong> in productivity, communication, and intelligent systems integration.
+      <div style="padding: 140px 32px 80px 60px; display:flex; flex-direction:column; justify-content:space-between; grid-column:2; grid-row:1">
+        <div class="hero-img-wrap">
+          <img src="f8sUr.jpg" alt="Inayat Rahim" />
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">2026</div>
+            <div class="stat-label">Current Year</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Research</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">$1K</div>
+            <div class="stat-label">Azure Credits</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Honors & Awards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><strong>Retrieval Augmented Generation</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>AI Agents</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Reinforcement Learning</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Multi-Agent Systems</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>LLM Fine-Tuning</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>PyTorch · Azure · NLP</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Transformer Architecture</strong></span>
+      <span class="ticker-item">·</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item"><strong>Retrieval Augmented Generation</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>AI Agents</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Reinforcement Learning</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Multi-Agent Systems</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>LLM Fine-Tuning</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>PyTorch · Azure · NLP</strong></span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item"><strong>Transformer Architecture</strong></span>
+      <span class="ticker-item">·</span>
     </div>
   </div>
 
-  <div class="edu-item">
-  <div class="degree">Self-Supervised Fine-Tuning (SSFT)</div>
-  <div class="institution">Self-Directed Projects</div>
-  <div class="date">Coming Soon</div>
-  <div class="description">
-    Leading groundbreaking research in <strong>Self-Supervised Fine-Tuning (SSFT)</strong> of transformer-based models 
-    for enterprise adoption. 
-    Dual focus on <strong>computational efficiency</strong> and <strong>business value creation</strong> through 
-    strategic model optimization. 
-    Developing frameworks that deliver <strong>measurable outcomes</strong>: optimized workflows, reduced operational 
-    costs, and enhanced ROI. 
-    Addressing <strong>critical industry challenges</strong> in AI deployment across healthcare, finance, and 
-    manufacturing sectors.
-  </div>
-</div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap section-inner">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <span class="section-title">About</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="about-grid reveal">
+        <div>
+          <p class="about-pull">"I build AI systems that don't just work in notebooks — they work in the world."</p>
+          <div class="about-body">
+            <p>I'm a second-year BS Artificial Intelligence student at <strong>Szabist University</strong>, Islamabad, focused on the intersection of research and production-grade engineering. My work sits at the frontier where language models meet real business constraints — latency, cost, reliability, and actual ROI.</p>
+            <p>My research spans <strong>Self-Supervised Fine-Tuning</strong> of transformer-based models, agentic pipeline design, and prompt engineering that scales. I care about building things that last: composable, observable, and genuinely useful.</p>
+            <p>As a <strong>Microsoft Student Ambassador</strong> (Beta) and Aspire Leaders Program fellow (Harvard Business School, 2025 cohort), I've learned that the best AI work happens at the intersection of deep technical skill and strategic thinking.</p>
+          </div>
+        </div>
+        <div class="about-sidebar">
+          <p class="sidebar-label">Contact</p>
+          <ul class="contact-list">
+            <li><a href="mailto:inayatrahim006@gmail.com">inayatrahim006@gmail.com</a></li>
+            <li><a href="tel:+923165800166">+92 316 580 0166</a></li>
+            <li><a href="https://www.linkedin.com/in/inayat-rahim-b0655b29b/" target="_blank">LinkedIn →</a></li>
+            <li><a href="https://github.com/inayatrahimdev" target="_blank">GitHub →</a></li>
+            <li>Islamabad, Pakistan</li>
+          </ul>
 
-
-</section>
-
-
-
-        <!-- Awards Section -->
-<section>
-  <h2 class="section-title">Honors & Awards</h2>
-  
-  <div class="edu-item">
-    <span class="degree">Microsoft Student Ambassador</span> – Beta Tier
-  </div>
-
-  <div class="edu-item">
-    <span class="degree">Selected Participant</span> – Cohere Lab Summer School on NLP, Cutting Edge Multi-Disciplinary Transformers & Advanced Generative AI
-  </div>
-
-  <div class="edu-item">
-    <span class="degree">Awarded $1,000 in Azure Credits</span> – Microsoft for Startups Founders Hub
-  </div>
-
-  <div class="edu-item">
-    <span class="degree">Received Cloud AI Credits</span> – OpenAI, GitHub Copilot, Notion, Miro, and more
-  </div>
-
-  <div class="edu-item">
-    <span class="degree">Aspire Leaders Program</span> – Led by Harvard Business School (2025 Cohort)
-  </div>
-
-  <div class="edu-item">
-    <span class="degree">Prompt Engineering Research Intern</span> – Excelerate
-    <div class="date">September 2025 – Present</div>
-  </div>
-</section>
-
-
-
-        <!-- Footer -->
-        <footer>
-            <p>© 2025 Inayat Rahim. All rights reserved.</p>
-        </footer>
+          <p class="sidebar-label">Location</p>
+          <ul class="contact-list">
+            <li>Islamabad / Rawalpindi, PK</li>
+            <li>Open to remote worldwide</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap section-inner">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <span class="section-title">Stack & Expertise</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="skills-columns reveal">
+        <div class="skill-group">
+          <p class="skill-group-label">AI / ML</p>
+          <div class="skill-item"><span class="skill-dot"></span>Retrieval Augmented Generation</div>
+          <div class="skill-item"><span class="skill-dot"></span>AI Agents & Agentic Pipelines</div>
+          <div class="skill-item"><span class="skill-dot"></span>Reinforcement Learning</div>
+          <div class="skill-item"><span class="skill-dot"></span>Multi-Agent Systems</div>
+          <div class="skill-item"><span class="skill-dot"></span>LLM Fine-Tuning (SSFT)</div>
+          <div class="skill-item"><span class="skill-dot"></span>Neural Architecture Search</div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Engineering</p>
+          <div class="skill-item"><span class="skill-dot"></span>PyTorch</div>
+          <div class="skill-item"><span class="skill-dot"></span>Azure Cloud (ML + Infra)</div>
+          <div class="skill-item"><span class="skill-dot"></span>Distributed Computing</div>
+          <div class="skill-item"><span class="skill-dot"></span>Algorithm Design</div>
+          <div class="skill-item"><span class="skill-dot"></span>Python / Git / APIs</div>
+          <div class="skill-item"><span class="skill-dot"></span>Transformer Architectures</div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Research</p>
+          <div class="skill-item"><span class="skill-dot"></span>Prompt Engineering</div>
+          <div class="skill-item"><span class="skill-dot"></span>NLP (Cohere Lab)</div>
+          <div class="skill-item"><span class="skill-dot"></span>Generative AI Systems</div>
+          <div class="skill-item"><span class="skill-dot"></span>Enterprise AI Strategy</div>
+          <div class="skill-item"><span class="skill-dot"></span>Cost-Efficient ML Ops</div>
+          <div class="skill-item"><span class="skill-dot"></span>Research → Production</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH / EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap section-inner">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <span class="section-title">Research & Experience</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-org">Excelerate</div>
+            <div class="exp-date">Sep 2025 – Present</div>
+          </div>
+          <div>
+            <div class="exp-role">Prompt Engineering Research Intern</div>
+            <div class="exp-desc">
+              Exploring advanced prompt engineering methods for LLMs with a focus on <strong>efficiency, reasoning, and adaptability</strong>. Designing strategies that accelerate business growth by unlocking new AI-driven capabilities, improving ROI through automation, and enabling companies to scale with data-driven insights. Actively solving real-time problems in productivity, communication, and intelligent systems integration.
+            </div>
+            <div class="exp-tag-row">
+              <span class="exp-tag">Prompt Engineering</span>
+              <span class="exp-tag">LLMs</span>
+              <span class="exp-tag">Business AI</span>
+              <span class="exp-tag">Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-org">Self-Directed</div>
+            <div class="exp-date">2025 – Ongoing</div>
+          </div>
+          <div>
+            <div class="exp-role">Self-Supervised Fine-Tuning (SSFT) Research</div>
+            <div class="exp-desc">
+              Leading independent research in <strong>Self-Supervised Fine-Tuning</strong> of transformer-based models for enterprise adoption. Dual focus on <strong>computational efficiency</strong> and business value creation through strategic model optimization. Developing frameworks that deliver optimized workflows, reduced operational costs, and enhanced ROI — with applications across healthcare, finance, and manufacturing.
+            </div>
+            <div class="exp-tag-row">
+              <span class="exp-tag">Transformers</span>
+              <span class="exp-tag">Fine-Tuning</span>
+              <span class="exp-tag">Self-Supervised Learning</span>
+              <span class="exp-tag">Enterprise AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-org">Szabist University</div>
+            <div class="exp-date">2023 – 2027</div>
+          </div>
+          <div>
+            <div class="exp-role">Undergraduate Research — AI & Agents</div>
+            <div class="exp-desc">
+              Research focused on <strong>Reinforcement Learning, AI Agents, RAG, and Multi-Agent Systems</strong> with an emphasis on maximizing business ROI. Developed expertise in solving real-time enterprise challenges by optimizing computational efficiency and reducing operational costs through innovative algorithmic strategies and scalable architectures.
+            </div>
+            <div class="exp-tag-row">
+              <span class="exp-tag">RL</span>
+              <span class="exp-tag">RAG</span>
+              <span class="exp-tag">Multi-Agent</span>
+              <span class="exp-tag">Scalable Systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HONORS -->
+  <section id="honors">
+    <div class="wrap section-inner">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <span class="section-title">Honors & Awards</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="honors-grid reveal">
+
+        <div class="honor-card">
+          <div class="honor-badge">⊞</div>
+          <div class="honor-num">01</div>
+          <div class="honor-title">Microsoft Student Ambassador</div>
+          <div class="honor-sub">Beta Tier — Microsoft</div>
+        </div>
+
+        <div class="honor-card">
+          <div class="honor-badge">◎</div>
+          <div class="honor-num">02</div>
+          <div class="honor-title">Aspire Leaders Program</div>
+          <div class="honor-sub">2025 Cohort — led by Harvard Business School</div>
+        </div>
+
+        <div class="honor-card">
+          <div class="honor-badge">☁</div>
+          <div class="honor-num">03</div>
+          <div class="honor-title">$1,000 Azure Credits</div>
+          <div class="honor-sub">Microsoft for Startups Founders Hub</div>
+        </div>
+
+        <div class="honor-card">
+          <div class="honor-badge">✦</div>
+          <div class="honor-num">04</div>
+          <div class="honor-title">Cohere Lab Summer School</div>
+          <div class="honor-sub">NLP, Multi-Disciplinary Transformers & Advanced GenAI</div>
+        </div>
+
+        <div class="honor-card">
+          <div class="honor-badge">◈</div>
+          <div class="honor-num">05</div>
+          <div class="honor-title">Cloud AI Credits</div>
+          <div class="honor-sub">OpenAI · GitHub Copilot · Notion · Miro · and more</div>
+        </div>
+
+        <div class="honor-card">
+          <div class="honor-badge">→</div>
+          <div class="honor-num">06</div>
+          <div class="honor-title">Prompt Engineering Research Intern</div>
+          <div class="honor-sub">Excelerate — Sep 2025 – Present</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap section-inner">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <span class="section-title">Education</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="edu-card reveal">
+        <div>
+          <div class="edu-year">2023 — 2027</div>
+        </div>
+        <div>
+          <div class="edu-degree">Artificial Intelligence</div>
+          <div class="edu-institution">Szabist University, Islamabad</div>
+          <div class="edu-body">
+            Specialized in Reinforcement Learning, AI Agents, RAG, and Multi-Agent Systems. Research focused on maximizing ROI and business value through strategic AI implementation — optimizing computational efficiency and reducing operational costs through innovative algorithmic strategies and scalable architectures.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect">
+    <div class="wrap">
+      <div class="connect-inner reveal">
+        <p class="connect-eyebrow">Let's build something</p>
+        <h2 class="connect-headline">WORK WITH<br><span>INAYAT</span></h2>
+        <p class="connect-sub">Open to research collaborations, AI engineering roles, and interesting problems.</p>
+        <div class="connect-links">
+          <a class="connect-link" href="mailto:inayatrahim006@gmail.com">Email</a>
+          <a class="connect-link" href="https://www.linkedin.com/in/inayat-rahim-b0655b29b/" target="_blank">LinkedIn</a>
+          <a class="connect-link" href="https://github.com/inayatrahimdev" target="_blank">GitHub</a>
+          <a class="connect-link" href="tel:+923165800166">+92 316 580 0166</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <span class="footer-copy">© 2026 Inayat Rahim. All rights reserved.</span>
+      <span class="footer-loc">Islamabad, Pakistan · inayatrahimdev.github.io</span>
+    </div>
+  </footer>
+
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
+    document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
