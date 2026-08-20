@@ -1,1 +1,1 @@
-# Visit my portfolio website: htpps://inayatrahimdev.github.io/
+# Visit my portfolio website: https://inayatrahimdev.github.io/
