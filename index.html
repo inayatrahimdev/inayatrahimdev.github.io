@@ -72,7 +72,7 @@ section.s{padding:96px 0}
 
 /* work */
 .work{border-top:2px solid var(--ink)}
-.proj{display:grid;grid-template-columns:90px 1fr 1.1fr;gap:28px;padding:34px 0;border-bottom:2px solid var(--ink);transition:background .2s,padding .2s}
+.proj{display:grid;grid-template-columns:120px 1fr 1.1fr;gap:28px;padding:34px 0;border-bottom:2px solid var(--ink);transition:background .2s,padding .2s}
 .proj:hover{background:#fff;padding-left:18px;padding-right:18px}
 .proj .yr{font:700 15px var(--d);color:var(--cobalt)}
 .proj h3{font-size:clamp(22px,2.6vw,32px);font-weight:700}
@@ -125,10 +125,10 @@ section.s{padding:64px 0}
 
 <header class="hero" id="top"><div class="w">
 <div>
-<h1>I build AI that works on <mark>real data</mark>, not just in notebooks.</h1>
-<p class="lead">AI engineering student at SZABIST Islamabad. I've shipped segmentation pipelines on satellite imagery, graph models on biomedical data, and now focus on RAG, LLM fine-tuning and agentic systems.</p>
+<h1>I build AI that survives <mark>messy, real data</mark>.</h1>
+<p class="lead">I'm Inayat, an AI student in Islamabad. So far I've segmented satellite images, predicted gene-disease links from biomedical graphs, and built vision systems that can see through fog. Right now I'm digging into RAG, fine-tuning and agents.</p>
 <div class="cta"><a class="btn yel" href="#contact">Hire me</a><a class="btn out" href="Inayat%20Rahim%20Resume.pdf" download>Download CV</a></div>
-<p class="who">Microsoft Learn Student Ambassador · Aspire Leaders, Harvard Business School 2025</p>
+<p class="who">Also a Microsoft Learn Student Ambassador and a 2025 Aspire Leaders fellow (Harvard Business School).</p>
 </div>
 <div class="rag" role="img" aria-label="Animated example of a retrieval augmented generation pipeline answering a question">
 <div class="q">What changed at this site since last week?</div>
@@ -140,44 +140,39 @@ section.s{padding:64px 0}
 </div></header>
 
 <div class="proof"><div class="w">
-<div><b>3.64</b><span>GPA, BS Artificial Intelligence</span></div>
-<div><b>3</b><span>vision systems built on multispectral and thermal data</span></div>
-<div><b>$1,000</b><span>Azure credits, Microsoft for Startups</span></div>
-<div><b>2027</b><span>Graduating, open to internships now</span></div>
+<div><b>MLSA</b><span>Microsoft Learn Student Ambassador, beta tier</span></div>
+<div><b>3</b><span>vision systems built on thermal and satellite data</span></div>
+<div><b>$1,000</b><span>in Azure credits from Microsoft for Startups</span></div>
+<div><b>2027</b><span>Graduating, and looking for internships now</span></div>
 </div></div>
 
 <section class="s" id="work"><div class="w">
-<h2>Projects that handle messy, real inputs</h2>
+<h2>Three projects where the data fought back</h2>
 <div class="work">
-<article class="proj"><span class="yr">2025</span><div><h3>Perimeter surveillance in fog and darkness</h3><div class="tags"><span>GroundingDINO</span><span>Swin</span><span>MobileSAM</span></div></div>
-<p>An edge system that fuses thermal and RGB video to flag intrusions, vehicles and weapon outlines when normal cameras fail. Open-vocabulary detection plus a Swin Transformer backbone.</p></article>
-<article class="proj"><span class="yr">2025</span><div><h3>Defect detection on factory surfaces</h3><div class="tags"><span>ViT</span><span>SAM</span><span>Label Studio</span></div></div>
-<p>A Vision Transformer pipeline that finds surface anomalies from visible and thermal images, with SAM and Swin backbones for precise segmentation in industrial settings.</p></article>
-<article class="proj"><span class="yr">2024</span><div><h3>Geo-intelligence for defense and aerospace</h3><div class="tags"><span>SAM</span><span>PaddleRS</span><span>FastSAM</span></div></div>
-<p>A dual-view system that reads multispectral satellite data for terrain and object detection, tracking spatial change across areas of interest.</p></article>
+<article class="proj"><span class="yr">2025 – now</span><div><h3>Perimeter surveillance in fog and darkness</h3><div class="tags"><span>GroundingDINO</span><span>Swin</span><span>MobileSAM</span></div></div>
+<p>Normal cameras give up in fog and at night. This system combines thermal and regular video to still catch people, vehicles and weapon outlines. GroundingDINO finds objects from plain-language prompts, and a Swin Transformer helps it see them clearly.</p></article>
+<article class="proj"><span class="yr">Jan – Mar 2025</span><div><h3>Defect detection on factory surfaces</h3><div class="tags"><span>ViT</span><span>SAM</span><span>Label Studio</span></div></div>
+<p>A tiny flaw on a factory surface is easy to miss when the lighting changes. I combined visible and thermal images, used a Vision Transformer to spot anomalies, and added SAM to outline exactly where the defect is.</p></article>
+<article class="proj"><span class="yr">Dec 2024 – Feb 2025</span><div><h3>Geo-intelligence for defense and aerospace</h3><div class="tags"><span>SAM</span><span>PaddleRS</span><span>FastSAM</span></div></div>
+<p>Take satellite images of the same region at different times and ask one question: what changed? I built a system that reads multispectral data, finds terrain and objects, and tracks changes across areas of interest.</p></article>
 </div></div></section>
 
 <section class="s alt" id="experience"><div class="w">
-<h2>Where I've done the work</h2>
+<h2>Where I've worked, and what I did there</h2>
 <div class="exp">
-<article class="card big"><h3>Prompt Engineering Research Intern, Excelerate</h3><p class="when">Sep 2025 to present</p>
-<p>Researching prompt methods that make LLMs <strong>faster, better at reasoning and easier to adapt</strong>, then turning them into automation that saves businesses time and cost.</p></article>
-<article class="card"><h3>ML Intern, ARCH Technologies</h3><p class="when">Apr to Aug 2024</p>
-<p>Built a SAM-based pipeline for satellite imagery and biomedical GNNs that predict gene-disease links. Tracked experiments with Weights &amp; Biases and Hugging Face Hub.</p></article>
-<article class="card"><h3>Self-supervised fine-tuning research</h3><p class="when">2025 to present</p>
-<p>Independent work on fine-tuning transformers for enterprise use, with a focus on <strong>lower compute cost</strong> without losing accuracy.</p></article>
+<article class="card big"><h3>Prompt Engineering Research Intern, Excelerate</h3><p class="when">Sep 2025 – Present</p>
+<p>I test prompting techniques to find out which ones help language models <strong>reason better and cost less to run</strong>, then turn the winners into automation that businesses can actually use.</p></article>
+<article class="card"><h3>ML Intern, ARCH Technologies</h3><p class="when">Apr 2024 – Aug 2024</p>
+<p>I built a SAM-based pipeline to annotate satellite imagery, and worked on graph neural networks that predict gene-disease links. Every experiment went into Weights &amp; Biases and Hugging Face Hub, so nothing got lost.</p></article>
+<article class="card"><h3>Self-supervised fine-tuning research</h3><p class="when">2025 – Present</p>
+<p>On my own time I'm researching how to fine-tune transformers so companies can use them without huge compute bills. The goal is to keep the accuracy and <strong>cut the cost</strong>.</p></article>
 </div></div></section>
 
-<section class="s" id="about"><div class="w two">
-<div>
-<h2>What I work with</h2>
-<div class="skill"><h3>Language models</h3><p>RAG, LLM fine-tuning, prompt engineering, AI agents, multi-agent systems, reinforcement learning.</p></div>
-<div class="skill"><h3>Computer vision</h3><p>Segment Anything, Vision Transformers, Swin, GroundingDINO, CLIP, multispectral and thermal imagery.</p></div>
-<div class="skill"><h3>Tools</h3><p>PyTorch, Hugging Face, Azure, Streamlit, Gradio, Git, Docker basics.</p></div>
-</div>
-<div>
+<section class="s" id="about"><div class="w">
+<div style="max-width:760px">
+<h2>A bit about me</h2>
 <div class="me"><img src="f8sUr.jpg" alt="Portrait of Inayat Rahim" width="130" height="170" loading="lazy">
-<p>I'm Inayat, a final-stretch AI student in Islamabad. I like problems where the data is noisy and the result has to hold up outside the demo. I teach Python and AI workshops and mentor students on the side.</p></div>
+<p>I'm drawn to problems where the data is noisy and the answer has to hold up outside a demo. I also run Python and AI workshops and mentor students who are just getting started.</p></div>
 <ul class="honors">
 <li><b>Microsoft Learn Student Ambassador</b>Beta tier</li>
 <li><b>Aspire Leaders Program</b>Led by Harvard Business School, 2025 cohort</li>
@@ -188,7 +183,7 @@ section.s{padding:64px 0}
 
 <footer class="end" id="contact"><div class="w">
 <h2>Hiring for AI? <mark>Let's talk.</mark></h2>
-<p>I'm looking for internships and engineering roles where I can ship models people rely on. I reply to every email, and I work remotely or from Islamabad.</p>
+<p>I'm looking for an internship or junior role where I can ship models that real people depend on. Send me an email and I'll get back to you. I'm in Islamabad and happy to work remotely.</p>
 <div class="cta"><a class="btn yel" href="mailto:inayatrahim006@gmail.com">inayatrahim006@gmail.com</a>
 <a class="btn out" href="https://www.linkedin.com/in/inayat-rahim-b0655b29b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a class="btn out" href="https://github.com/inayatrahimdev" target="_blank" rel="noopener noreferrer">GitHub</a>
