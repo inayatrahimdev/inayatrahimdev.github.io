@@ -19,8 +19,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 :root{
-    --brown: #1E3A5F;   /* deep navy: primary accent (was brown) */
-    --peach: #DCE5EF;   /* pale steel mist: background tint (was peach) */
+    --brown: #1E3A5F;   /* deep navy: primary accent */
+    --peach: #DCE5EF;   /* pale steel mist: background tint */
     --gold: #B08D4F;    /* muted antique gold: single secondary accent */
     --text: #0F1B2D;
     --muted: #3E4C5E;
@@ -137,19 +137,20 @@ nav{
 .nav-container .contact-btn{
     background-color: transparent;
     padding: 5px 20px;
-    border-radius: 20px;
+    border-radius: 4px;
     border: 2px solid var(--brown);
+    background-color: var(--brown);
     transition: 0.2s linear;
 }
 
 .nav-container .contact-btn a{
-    color: var(--brown);
+    color: #fff;
     transition: 0.3s linear;
 }
 .nav-container .contact-btn a::before{ display: none; }
 
-.nav-container .contact-btn:hover{ background-color: var(--brown); }
-.nav-container .contact-btn:hover a{ color: white; }
+.nav-container .contact-btn:hover{ background-color: transparent; }
+.nav-container .contact-btn:hover a{ color: var(--brown); }
 
 .dropdown{
     z-index: 100;
@@ -191,6 +192,7 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: row-reverse;
     padding: 20px 0;
 }
 
@@ -204,14 +206,14 @@ nav{
 /* Techy visual wrapper */
 .visual{
     position: relative;
-    width: min(100%, 460px);
-    aspect-ratio: 1 / 1;
+    width: min(100%, 400px);
+    aspect-ratio: 4 / 5;
 }
 .visual .blob{ width: 100%; }
 
 .grid-dots{
     position: absolute;
-    inset: -6% -8% auto auto;
+    inset: auto auto -6% -8%;
     width: 46%;
     height: 46%;
     background-image: radial-gradient(var(--gold) 1.6px, transparent 1.7px);
@@ -222,9 +224,9 @@ nav{
 
 .ring{
     position: absolute;
-    inset: -5%;
+    inset: -4%;
     border: 2px dashed rgba(30,58,95,0.45);
-    border-radius: 50%;
+    border-radius: 999px 999px 36px 36px;
     animation: spin 40s linear infinite;
     z-index: 0;
 }
@@ -235,7 +237,7 @@ nav{
 .code-card{
     position: absolute;
     z-index: 3;
-    right: -6%;
+    left: -8%;
     bottom: -4%;
     width: 64%;
     background: #0F1E33;
@@ -270,17 +272,17 @@ nav{
     box-shadow: 0 6px 16px rgba(30,58,95,0.18);
     animation: float 5s ease-in-out infinite;
 }
-.chip.c1{ top: 8%; left: -6%; }
-.chip.c2{ top: 46%; left: -10%; animation-delay: -1.6s; }
-.chip.c3{ top: -3%; right: 14%; animation-delay: -3.2s; }
+.chip.c1{ top: 12%; right: -8%; }
+.chip.c2{ top: 50%; right: -12%; animation-delay: -1.6s; }
+.chip.c3{ top: -2%; left: 10%; animation-delay: -3.2s; }
 @keyframes float{ 50%{ transform: translateY(-9px); } }
 
-/* Blob photo frame — same look as the reference hero art */
+/* Arch photo frame */
 .blob{
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 58% 42% 55% 45% / 50% 58% 42% 50%;
+    aspect-ratio: 4 / 5;
+    border-radius: 999px 999px 28px 28px;
     background: #C9D4E1;
     border: 3px solid var(--brown);
     overflow: hidden;
@@ -395,7 +397,7 @@ nav{
 .block{
     width: 100%;
     padding: 100px 10%;
-    text-align: center;
+    text-align: left;
 }
 
 .block.alt{ background-color: rgba(255,255,255,0.55); }
@@ -406,14 +408,10 @@ nav{
     margin-bottom: 14px;
 }
 
-.block h2::after{
-    content: "";
-    display: block;
-    width: 70px;
-    height: 4px;
-    margin: 12px auto 0;
-    background: var(--gold);
-    border-radius: 2px;
+.block h2{
+    padding-left: 18px;
+    border-left: 6px solid var(--gold);
+    line-height: 1.1;
 }
 
 .sub{ color: var(--muted); margin-bottom: 36px; }
@@ -424,9 +422,10 @@ nav{
 .cards.three{ grid-template-columns: repeat(3, 1fr); }
 
 .card{
-    background: rgba(255,255,255,0.85);
-    border: 2px solid var(--brown);
-    border-radius: 16px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(30,58,95,0.25);
+    border-top: 5px solid var(--brown);
+    border-radius: 6px;
     padding: 28px;
     transition: 0.25s linear;
 }
@@ -554,7 +553,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10px;
 }
 
@@ -605,8 +604,8 @@ footer{
     .main-container .content{ width: 84%; }
     .main-container .image{ width: 78%; padding: 0 8% 6% 8%; }
     .chip{ font-size: 0.72rem; padding: 4px 10px; }
-    .chip.c1, .chip.c2{ left: -4%; }
-    .code-card{ right: -2%; width: 78%; padding: 10px 12px 12px; }
+    .chip.c1, .chip.c2{ right: -2%; }
+    .code-card{ left: -2%; width: 78%; padding: 10px 12px 12px; }
     .code-card pre{ font-size: 0.56rem; }
 
     .social-links i{ width: 2.5rem; height: 2.5rem; font-size: 1.3rem; }
@@ -632,10 +631,10 @@ footer{
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#skills">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#skills">Toolkit</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#projects">Work</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#experience">Experience</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact Me</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact</a></div>
             </div>
             <button class="hamburg" aria-label="Open menu" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -643,10 +642,10 @@ footer{
             <div class="links">
                 <a href="#home" onclick="closeMenu()">Home</a>
                 <a href="#about" onclick="closeMenu()">About</a>
-                <a href="#skills" onclick="closeMenu()">Skills</a>
-                <a href="#projects" onclick="closeMenu()">Projects</a>
+                <a href="#skills" onclick="closeMenu()">Toolkit</a>
+                <a href="#projects" onclick="closeMenu()">Work</a>
                 <a href="#experience" onclick="closeMenu()">Experience</a>
-                <a href="#contact" onclick="closeMenu()">Contact Me</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
                 <button class="cancel" aria-label="Close menu" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
             </div>
         </div>
@@ -677,8 +676,8 @@ footer{
                 </div>
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Inayat Rahim</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span id="typed"></span></div>
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800"><span>Inayat</span> Rahim</h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Focused on <span id="typed"></span></div>
                 <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">I build AI that works on real data, not just in notebooks. AI engineering student at SZABIST Islamabad. I've shipped segmentation pipelines on satellite imagery and graph models on biomedical data, and now focus on RAG, LLM fine-tuning and agentic systems.</p>
                 <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
                     <a href="https://github.com/inayatrahimdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -686,7 +685,7 @@ footer{
                     <a href="mailto:inayatrahim006@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
                 <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-                    <a href="Inayat%20Rahim%20Resume.pdf" download><button>Download CV</button></a>
+                    <a href="Inayat%20Rahim%20Resume.pdf" download><button>View résumé</button></a>
                 </div>
             </div>
         </div>
@@ -694,7 +693,7 @@ footer{
 
     <!-- ABOUT -->
     <section id="about" class="block">
-        <h2 data-aos="fade-up">About Me</h2>
+        <h2 data-aos="fade-up">About</h2>
         <div class="about-grid">
             <div class="about-text" data-aos="fade-right">
                 <p>I'm Inayat, a final-stretch AI student in Islamabad. I like problems where the data is noisy and the result has to hold up outside the demo. I teach Python and AI workshops and mentor students on the side.</p>
@@ -717,7 +716,7 @@ footer{
 
     <!-- SKILLS -->
     <section id="skills" class="block alt">
-        <h2 data-aos="fade-up">My Skills</h2>
+        <h2 data-aos="fade-up">Toolkit</h2>
         <div class="cards three">
             <article class="card" data-aos="fade-up" data-aos-delay="100">
                 <i class="fa-solid fa-brain"></i>
@@ -739,7 +738,7 @@ footer{
 
     <!-- PROJECTS -->
     <section id="projects" class="block">
-        <h2 data-aos="fade-up">Projects</h2>
+        <h2 data-aos="fade-up">Selected Work</h2>
         <p class="sub" data-aos="fade-up">Work that handles messy, real inputs.</p>
         <div class="cards three">
             <article class="card project" data-aos="zoom-in" data-aos-delay="100">
@@ -822,10 +821,10 @@ function closeMenu() {
     if (!el) return;
 
     var roles = [
-        "AI Engineer",
-        "LLM Fine-Tuning Builder",
-        "RAG & Agents Developer",
-        "Computer Vision Engineer"
+        "RAG systems",
+        "LLM fine-tuning",
+        "Agentic workflows",
+        "Computer vision"
     ];
 
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
